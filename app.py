@@ -594,10 +594,7 @@ if 'df' in locals() and not df.empty:
         )
         
         st.plotly_chart(fig_supply, use_container_width=True)
-        
-        # Growth rate analysis
-        st.markdown("### Supply Growth Analysis")
-        
+
         # Calculate week-over-week growth rate
         weekly_karma_df['Supply_Growth_Rate'] = weekly_karma_df['Cumulative_Karma_Supply'].pct_change() * 100
         
